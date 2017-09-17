@@ -1,0 +1,30 @@
+Customers
+	
+	/addCustomer
+
+	/deleteCustomer
+
+	/editCustomer
+
+	/getAllCUstomers
+
+items
+
+	/addItem
+
+	/deleteItem
+
+	/editItem
+
+	/getAllItems
+
+order
+
+	/addOrder
+
+	/getAllOrders
+	
+	/deleteOrder
+
+
+
