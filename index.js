@@ -13,7 +13,7 @@ var http = require('http');
 var https = require('https');
 
 var fs = require('fs');
-var multer  = require('multer');
+
 
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
@@ -74,18 +74,6 @@ app.use(function (req,res,next){
 });
 
 var done=false;
-app.use(multer({ dest:'/home/dileep/apache-tomcat-6.0.37/webapps/uploads/',
-	rename: function (fieldname, filename) {
-	    return filename+Date.now();
-	  },
-	onFileUploadStart: function (file) {
-	  console.log(file.originalname + ' is starting ...')
-	},
-	onFileUploadComplete: function (file) {
-	  console.log(file.fieldname + ' uploaded to  ' + file.path)
-	  done=true;
-	}
-}));
 
 //Database Connection
 var openDBConnection = function(){
