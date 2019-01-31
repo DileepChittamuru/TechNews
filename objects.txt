@@ -1,0 +1,48 @@
+Namespace
+   
+Retrieving the properties of object
+ 
+	Bracket notation
+	dot notation
+	
+Setting the properties of Object
+
+Adding new properties to object
+
+object literals
+
+ways of creating an object
+	
+	// Object() constructor
+
+	var person1 = new Object();
+
+	var person1 = new Object({
+	  name: 'Chris',
+	  age: 38,
+	  greeting: function() {
+		alert('Hi! I\'m ' + this.name + '.');
+	  }
+	});
+
+	// using create method
+
+	var person2 = Object.create(person1);
+
+	// curly brackets
+
+	var person3 = {};
+
+Prototypes are the mechanism by which JavaScript objects inherit features from one another
+ 
+java script is prototype based language
+
+	1 each object has __proto__ property
+
+	2 every function has a 'prototype' property
+	
+	cross-platform
+	JavaScript is case-sensitive and uses the Unicode character set.
+
+ 
+

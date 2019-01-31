@@ -1,0 +1,37 @@
+gulp 
+
+read --> process -- > write
+
+gulp has 4 apis:
+
+gulp.task :- 
+=========	
+	syntax:
+
+		gulp.task('js', function() {
+			return gulp
+				.src('./src/**/*.js')
+				.pipe(jshint())
+				.pipe(concat('all.js')
+				.pipe(uglify())
+				.pipe(gulp.dest('./build/')));
+		});
+	
+	gulp task usage:
+	
+		1 : test
+		2 : eslint
+		3 : minizing
+		4 : serve you app
+gulp.src :-
+========
+		gulp.src('path', [optional])
+		usage:
+		gulp.src('./src/**/*.js')
+	
+gulp.dest :
+		gulp.dest('./build/')
+		
+		writing the files into build folder.
+		
+gulp.watch

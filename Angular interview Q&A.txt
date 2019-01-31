@@ -1,0 +1,56 @@
+
+1  Component creation
+
+2  interaction
+
+3  HTTP service
+
+4  Custom pipe
+
+5  Custom directive
+
+6  Routing
+
+7  Testing
+
+8  Dependency Injection
+
+9  How application loads
+
+10 Difference between 1.x and 2.x
+
+11 Nested Routes
+
+
+
+
+
+
+HTML5 & CSS3 :-
+
+	--> semantic & non semantic elements
+	--> section article
+	--> in-line block level
+	--> selectors div p, div > p, div + pipe
+	--> add class remove class jquery
+	--> events prevent default
+	--> 7th elements
+	--> in line , block level
+	--> position
+	--> media query
+	--> client browser
+	--> html 5 features
+	--> window.onload, document.ready
+	--> challenges in your carrier
+	--> my self
+	--> section article
+	--> HTML standards
+	--> Attribute selectors
+	--> internalization
+
+
+
+
+
+
+

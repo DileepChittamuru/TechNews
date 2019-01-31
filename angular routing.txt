@@ -1,0 +1,48 @@
+
+Routing & Navigation:
+======================
+
+	Angular Routing enables you to navigate from one view to another as users perform application tasks
+
+	import { Router, RouterModule, Routes } from '@angular/router';
+
+	RouterLink RouterLinkActive and RouterOutlet are directives provided by the Angular RouterModule package.
+	They are readily available for you to use in the template.
+
+	RouterLink ==> we use it instead of href
+	RouterLinkActive ==> toggles css classes for active link
+	RouterOutlet ==> place holder for components
+	pathMatch ==> 
+	wild cards ==> when url does not match ass page not found 
+	
+Router features:
+			1 guards,
+			2 resolvers,
+			3 child routing
+			
+		
+	imports: [
+  BrowserModule,
+  FormsModule,
+  HeroesModule,
+  AppRoutingModule
+],
+
+The order of route configuration matters. 
+
+1 at the end of each successful navigation 
+
+Router service builds an ActivatedRoute object that holds the current state of router. 
+
+CanActivate to mediate navigation to a route.
+
+CanActivateChild to mediate navigation to a child route.
+
+CanDeactivate to mediate navigation away from the current route.
+
+Resolve to perform route data retrieval before route activation.
+
+CanLoad to mediate navigation to a feature module loaded asynchronously.
+
+
+	

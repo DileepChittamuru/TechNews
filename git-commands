@@ -1,0 +1,71 @@
+git flow: 
+=========
+unstaged file -- > staged files --> commit --> pull --> push
+
+Git terms :-
+=========
+remote: Branch which about to merge into existing branch
+origin: Contains all branches i.e feature branch, master branch i.e develop 
+local: 	Branch which we are working
+untracked files:
+un-staged files: when we change in content of file those files are unstaged
+staged files: we will move the filed from unstaged to staged to commit
+index:
+master/develop : main source branch name, master is a userdefined name
+HEAD: Indicates the head of the current branch
+
+
+Git Work Flow with bitbucket GITTOOL :-
+====================================
+
+1.  CLONE source from bitbucket
+
+ 	git clone https://C37565@p-bitbucket.nl.eu.abnamro.com:7999/scm/fed/oca.git
+
+	Now you are in develope branch
+
+2.  Create a new feature branch in bitbucket
+
+3.  CHECKOUT to that branch
+
+	git checkout -b <branch name>
+
+	example: git checkout -b feature/SE2-1400-futures-portfolio-details
+
+4.  Check current/active branch 
+		
+	git branch
+
+5.  clone remote branch
+
+	git fetch origin <branch name>
+
+6. Rebasing
+	1) Checks out the master/develop branch.
+	2) Pulls any remote changes.
+	3) Swaps back to your feture branch.
+	4) Rebases with master/develop.
+
+	git checkout master && git pull && git checkout - && git rebase master
+	
+7. Resolving conflicts
+
+	"Head" means latest changes in branch.
+	you should commit and push after resolving conflicts
+	In bit bucket it will be in disabled mode
+
+issues:
+	1   :	when you got unstaged files by doing in integration branch  by doing [ Remote --> Fetch From --> origin ]
+	
+	1 Sol : 	Delete the files maually which are unstaged files then take update of branch.	
+	
+	2nd sol: git checkout .
+
+Removed compiled files in git
+
+	git clean -df
+	git checkout -- .
+	
+
+
+

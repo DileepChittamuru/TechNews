@@ -1,0 +1,95 @@
+Introduction
+
+jasmine 
+
+BDD: behavior-driven development framework
+http://joshldavis.com/2013/05/27/difference-between-tdd-and-bdd/
+
+TDD: 
+
+| ---> 1 write test cases.
+|	   2 Run test cases obviously fails because code is not written yet !
+|	   3 write the code.
+|	   4 Run the test cases 
+| ----> 5 re factor the code
+
+
+
+Matchers:
+========
+	Each matcher implements a boolean comparison between the actual value and the expected value
+	
+	1. toBe() similar to ===
+	2. toEqual() works on literals and variables and objects
+	3. toMatch() works for regular expressions
+	4. toBeDefined() compares against undefined
+	5. toBeNull() 
+
+	beforeEach(): executes before each it block.
+
+	afterEach(): executes after each it block.
+
+spies: 
+
+==>	spies to mock asynchronous and synchronous function calls
+
+	A mock is a fake object
+
+	getData is a inner function.
+
+	spy will not touch the original function
+	
+==>	spyOn(detailsController,’getData’);
+	expect(detailsController.getData).toHaveBeenCalled()
+	expect(detailsController.getData).toHaveBeenCalledWith(abc,ase);
+
+==>	Returning values from Jasmine spies
+	spyOn(detailsController,’extractData’).and.returnValue(true);
+	var result = detailsController.extractData(true)
+	expect(result).toBe(true);
+
+==>	If you need to replace the function you are mocking, you can use:
+
+	spyOn(detailsController,’getFakeSomething’).and.callFake(function() {
+		return "I'm replacing the real function with this";
+	});
+
+==> Using Jasmine spies to verify code was called
+	spyOn(detailsController,’extractData’).and.callThrough();
+
+==>By chaining the spy with and.throwError, all calls to the spy will throw the specified value as an error.
+
+	spyOn(detailsController,’extractData’).and.throughError('not found')
+	expect(detailsController.extractData).toThrowError('not found');
+
+==>.and.stub()
+
+
+CreateSpyObj:
+
+	In order to create a mock with multiple spies, use jasmine.createSpyObj and pass an array of strings.
+ 	It returns an object that has a property for each string that is a spy.
+
+ 	example:
+ 	var tape = jasmine.createSpyObj('tape', ['play', 'pause', 'stop', 'rewind']);
+
+ 	tape.play();
+ 	tape.pause();
+ 	tape.rewind(0);
+
+
+jasmine.any
+
+	is useful for comparing arguments
+
+
+
+
+
+
+
+
+
+
+
+

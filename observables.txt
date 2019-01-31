@@ -1,0 +1,36 @@
+Observables & RxJs
+
+	Observables 
+	
+	You can think of an observable as an array whose items arrive asynchronously over time.
+	Observables help you manage asynchronous data, such as data coming from a backend service.
+	Observables are used within Angular itself, including Angular’s event system and its http client service.
+	To use observables, Angular uses a third-party library called Reactive Extensions (RxJS).
+	Observables are a proposed feature for ES 2016, the next version of JavaScript
+	
+	Single threading is actually a good idea…
+
+	Observables, then, help JavaScript as a language integrate the observer design pattern:
+	
+Evolving Async
+
+	call back
+	promises
+	xmlhttpRequest
+	fetch
+	observables using RX/js libarary
+	
+	Please note the dollar sign.
+	Using the dollar sign in the name of a variable that is an observable, is considered best practice.
+	This way it’s easy to identify if your variable is an observable or not.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
